@@ -3,54 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MB - Marcão Burguer | Contato</title>
+  <title>MB - Marcão Burguer</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>MB - Marcão Burguer</h1>
-    <nav aria-label="Menu principal">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo da MB - Marcão Burguer">
+        <div>
+          <h1>MB - Marcão Burguer</h1>
+          <p>Hamburgueria artesanal</p>
+        </div>
+      </div>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
     <section>
       <h2>Fale com a gente</h2>
-      <form action="#" method="post">
-        <div>
+      <form id="contact-form" action="#" method="get">
+        <div class="form-group">
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" required>
         </div>
 
-        <div>
+        <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
         </div>
 
-        <div>
+        <div class="form-group">
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
         </div>
 
-        <button type="submit">Enviar</button>
+        <button class="btn" type="submit">Enviar</button>
       </form>
+      <p id="form-feedback" aria-live="polite"></p>
     </section>
 
-    <section>
+    <section class="contact-links">
       <h2>Outros canais</h2>
-      <p><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></p>
       <p><a href="mailto:contato@marcaoburguer.com">contato@marcaoburguer.com</a></p>
-      <p><a href="tel:+5511999999999">(11) 99999-9999</a></p>
+      <p><a href="tel:(71) 3462-9580">(71) 3462-9580</a></p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 MB - Marcão Burguer. Todos os direitos reservados.</p>
-    <p>Rua Exemplo, 123 - Centro | Atendimento: (11) 99999-9999</p>
+    <div class="container">
+      <p>&copy; 2026 MB - Marcão Burguer. Todos os direitos reservados.</p>
+      <p><a href="https://www.universidadesenaicimatec.edu.br/">Orlando Gomes, Senai Cimatec</a> | Atendimento: (71) 3462-9580</p>
+    </div>
   </footer>
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const feedback = document.getElementById("form-feedback");
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      feedback.textContent = "MB agradece sua mensagem! Entraremos em contato em breve.";
+      contactForm.reset();
+    });
+  </script>
 </body>
 </html>

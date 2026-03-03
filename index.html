@@ -3,50 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MB - Marcão Burguer | Home</title>
+  <title>MB - Marcão Burguer</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>MB - Marcão Burguer</h1>
-    <nav aria-label="Menu principal">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo da MB - Marcão Burguer">
+        <div>
+          <h1>MB - Marcão Burguer</h1>
+          <p>Hamburgueria artesanal</p>
+        </div>
+      </div>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
     <section>
       <h2>O sabor que marca cada mordida</h2>
       <p>
         Na MB - Marcão Burguer, cada hambúrguer é preparado com ingredientes selecionados,
         pão fresquinho e muito cuidado para entregar uma experiência deliciosa e inesquecível.
       </p>
-      <a href="contato.html">Peça agora</a>
+      <a class="btn" href="contato.html">Peça agora</a>
     </section>
 
     <section>
       <h2>Por que escolher a MB?</h2>
-      <article>
-        <h3>Ingredientes de qualidade</h3>
-        <p>Selecionamos carnes e acompanhamentos frescos para garantir o melhor sabor.</p>
-      </article>
-      <article>
-        <h3>Preparo artesanal</h3>
-        <p>Cada burger é montado na hora, com atenção aos detalhes e padrão de excelência.</p>
-      </article>
-      <article>
-        <h3>Atendimento rápido</h3>
-        <p>Agilidade no atendimento para você matar a fome sem perder tempo.</p>
-      </article>
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Ingredientes de qualidade</h3>
+          <p>Selecionamos carnes e acompanhamentos frescos para garantir o melhor sabor.</p>
+        </article>
+        <article class="card">
+          <h3>Preparo artesanal</h3>
+          <p>Cada burger é montado na hora, com atenção aos detalhes e padrão de excelência.</p>
+        </article>
+        <article class="card">
+          <h3>Atendimento rápido</h3>
+          <p>Agilidade no atendimento para você matar a fome sem perder tempo.</p>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 MB - Marcão Burguer. Todos os direitos reservados.</p>
-    <p>Rua Exemplo, 123 - Centro | Atendimento: (11) 99999-9999</p>
+    <div class="container">
+      <p>&copy; 2026 MB - Marcão Burguer. Todos os direitos reservados.</p>
+      <p><a href="https://www.universidadesenaicimatec.edu.br/">Orlando Gomes, Senai Cimatec</a> | Atendimento: (71) 3462-9580</p>
+    </div>
   </footer>
 </body>
 </html>
